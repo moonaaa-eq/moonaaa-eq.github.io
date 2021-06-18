@@ -240,6 +240,151 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/18/linux/linux-%E6%97%A5%E5%BF%97%E7%AE%A1%E7%90%86%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="moonaa's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/06/18/linux/linux-%E6%97%A5%E5%BF%97%E7%AE%A1%E7%90%86%E5%AD%A6%E4%B9%A0/" itemprop="url">linux-日志管理学习</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-06-18T11:45:51+08:00">
+                2021-06-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="syslogd"><a href="#syslogd" class="headerlink" title="syslogd"></a>syslogd</h1><ul>
+<li>输出日志的格式：date+hostname+service+detail information</li>
+<li>日志级别(级别依次递增)<ul>
+<li>debug</li>
+<li>info</li>
+<li>notice</li>
+<li>warnning</li>
+<li>err</li>
+<li>crit</li>
+<li>alert</li>
+<li>emerg</li>
+<li>none</li>
+</ul>
+</li>
+<li>日志设定<ul>
+<li><code>&lt;名称&gt;.&lt;日志级别&gt; &lt;输出日志&gt;</code></li>
+<li>例如：<code>local.* /var/log/local.log</code>，就表示local的所有类型的文件都输出到/var/log/local文件下</li>
+</ul>
+</li>
+</ul>
+<h2 id="logrotate"><a href="#logrotate" class="headerlink" title="logrotate"></a>logrotate</h2><p>自动滚动log的名字，同时自动清除就得日志</p>
+<p>一些logrotate.conf的配置参数说明</p>
+<img src="/2021/06/18/linux/linux-%E6%97%A5%E5%BF%97%E7%AE%A1%E7%90%86%E5%AD%A6%E4%B9%A0/logrotateconf.png" class="logrotateconf">
+<h1 id="journalctl"><a href="#journalctl" class="headerlink" title="journalctl"></a>journalctl</h1><p>主要是内存日志</p>
+<p>一些和journalctl相关的指令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">journalctl -n 3 <span class="comment"># 展示最近3条信息，3可以换成其他数字</span></span><br><span class="line">journalctl -p err <span class="comment"># 展示错误信息，err可以换成其他的日志级别</span></span><br><span class="line">journalctl -since 19:00 -until 20:00 <span class="comment"># 筛选出某一时间段的日志</span></span><br><span class="line">journalctl -o verbose <span class="comment"># 展示日志详细内容</span></span><br><span class="line">journalctl | grep sshd <span class="comment"># 结合grep查出与sshd相关的日志</span></span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/06/16/linux/MySql%E5%9C%A8Linux%E4%B8%8A%E7%9A%84%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1357,7 +1502,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
